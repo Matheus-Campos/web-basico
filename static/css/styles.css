@@ -1,0 +1,102 @@
+/* adicionando estilos para todos elementos usando (*) */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* pegando os elementos de mais alto nível (html, body)
+ * e definindo a altura deles para 100% da tela.
+ * 
+ * outra coisa importante: no HTML nós temos herança de alguns estilos,
+ * isso significa que todos os textos do HTML terão fonte Arial, nesse caso.
+ */
+html,
+body {
+  height: 100%;
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ao pegar um elemento pela classe, usa-se . */
+div.container {
+  width: 720px;
+  height: 500px;
+  padding: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ao pegar um elemento pelo ID, usa-se # */
+ul#todo-list {
+  list-style: decimal;
+  margin-bottom: 20px;
+}
+
+/* pegando todos os <li> dentro de uma <ul id="todo-list">
+ * que por sua vez, está dentro de uma <div class="container">.
+ *
+ * SOMENTE AS <li> SÃO ESTILIZADAS AQUI!
+ * as informações que vem antes da <li> servem apenas para dar contexto.
+ */
+div.container ul#todo-list li {
+  margin-bottom: 5px;
+}
+
+/* também é possível pegar um elemento pelo ID 
+ * ou classe sem especificar a tag.
+ */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+
+button {
+  /* definindo cor em RGB */
+  background-color: rgb(189, 87, 90);
+
+  /* definindo cor em hexadecimal */
+  color: #ffffff;
+
+  height: 40px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+
+  /* transição apenas para a cor de fundo */
+  transition: background-color ease 0.3s;
+}
+
+/* sobrescrição de estilo, alterei a cor vermelha
+ * que tinha sido definida anteriormente para azul,
+ * apenas nesse botão específico.
+ */
+button#submit-button {
+  background-color: teal;
+}
+
+/* repare que a cor de fundo tem animação, enquanto a cor do texto não. */
+#submit-button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 0 10px;
+  border: 0;
+  border-bottom-width: 2px;
+  border-style: solid;
+  background-color: transparent;
+
+  /* definindo cor em RGB com transparência (30% opaco) */
+  border-color: rgba(178, 122, 9, 0.3);
+}

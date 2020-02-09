@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Importação do CSS -->
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <title>Dev web básico</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Hello world!</h1>
+
+      <h2>Lista de afazeres</h2>
+
+      <ul id="todo-list">
+        <li><input class="todo-input" type="text" /></li>
+      </ul>
+
+      <button type="button" onclick="addToDo()">
+        Adicionar mais um afazer
+      </button>
+      <button type="button" id="submit-button" onclick="printToDos()">
+        Terminei minha lista!
+      </button>
+    </div>
+
+    <!-- importação do JavaScript -->
+    <script src="../static/js/index.js"></script>
+  </body>
+</html>
